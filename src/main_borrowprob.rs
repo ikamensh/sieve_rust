@@ -17,7 +17,7 @@ fn main() {
     // let mut to_push = Vec::new();
 
     while n < SEARCH_MAX {
-        let fs = factors.get(&n).clone();
+        let fs = factors.get(&n);
         match fs {
             None => {
                 primes.push(n);
@@ -26,7 +26,8 @@ fn main() {
                 }
             }
             Some(v) => {
-                for factor in v {
+                let iter_over = v.clone();
+                for factor in iter_over.iter() {
                     let not_prime = *factor + n;
                     let maybe_existing_factors = factors.get_mut(&not_prime);
                     match maybe_existing_factors {
