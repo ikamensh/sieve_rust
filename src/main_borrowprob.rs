@@ -38,15 +38,6 @@ fn main() {
             }
         }
 
-        // while let Some((not_prime, factor)) = to_push.pop() {
-        //     let maybe_existing_factors = factors.get_mut(&not_prime);
-        //     match maybe_existing_factors {
-        //         None => {
-        //             factors.insert(not_prime, vec![factor]);
-        //         }
-        //         Some(existing_factors) => existing_factors.push(factor),
-        //     }
-        // }
         //        if n % 100_000 == 0 {
         //            println!("Found {} primes up to the number {}", primes.len(), n);
         //        }
